@@ -17,7 +17,7 @@ do
 	cd $dir
 	sed -i "s#^PREFIX.*=.*#PREFIX := $ZYNTHIAN_PLUGINS_DIR#" Makefile
 	sed -i "s#^DESTDIR.*=.*#DESTDIR := /lv2#" Makefile
-	make
+	make -j$(nproc)
 	make install
 	cd -
 done

@@ -6,7 +6,7 @@ if [ -d "punk-console.lv2" ]; then
 fi
 git clone https://github.com/switryk/punk-console.lv2.git
 cd punk-console.lv2
-make
+make -j$(nproc)
 make install
 make clean
 cd ..

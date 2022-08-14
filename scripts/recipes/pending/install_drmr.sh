@@ -16,7 +16,7 @@ cmake ..
 
 sed -i -- 's/-msse -msse2 -mfpmath=sse //' Makefile
 sed -i -- 's/LV2DIR ?= \$(PREFIX)\/$(LIBDIR)\/lv2/LV2DIR ?= \/home\/pi\/zynthian\/zynthian-plugins\/mod-lv2/' Makefile
-make
+make -j$(nproc)
 sudo make install
 sudo cp -R modgui /home/pi/zynthian/zynthian-plugins/mod-lv2/mclk.lv2
 cat <<EOF >>/home/pi/zynthian/zynthian-plugins/lv2/mclk.lv2/manifest.ttl

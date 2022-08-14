@@ -8,5 +8,5 @@ fi
 
 git clone https://github.com/bitbank2/VL53L0X.git
 cd "VL53L0X"
-make
+make -j$(nproc)
 #rm -rf "VL53L0X"

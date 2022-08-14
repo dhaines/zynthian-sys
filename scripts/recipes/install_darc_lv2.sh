@@ -10,7 +10,7 @@ export OPTIMIZATIONS=""
 git clone git://github.com/x42/darc.lv2.git
 cd darc.lv2
 make submodules
-make
+make -j$(nproc)
 make install PREFIX=/usr/local
 cd ..
 

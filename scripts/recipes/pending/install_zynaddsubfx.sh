@@ -14,7 +14,7 @@ do
 done
 sed -i -- 's/-lX11 -lGL//' ./src/Plugin/ZynAddSubFX/CMakeFiles/ZynAddSubFX_lv2.dir/link.txt
 sed -i -- 's/-lX11 -lGL//' ./src/Plugin/ZynAddSubFX/CMakeFiles/ZynAddSubFX_vst.dir/link.txt
-make
+make -j$(nproc)
 sudo make install
 sudo rm -rf /usr/local/lib/vst
 make clean

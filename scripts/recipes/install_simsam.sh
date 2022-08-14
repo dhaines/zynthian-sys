@@ -7,7 +7,7 @@ patch -p1 <01_mod-tweaks.patch
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make
+make -j$(nproc)
 mkdir ${ZYNTHIAN_PLUGINS_DIR}/lv2/simsam.lv2
 cp simsam.so ${ZYNTHIAN_PLUGINS_DIR}/lv2/simsam.lv2
 cd ../bundles/simsam.lv2

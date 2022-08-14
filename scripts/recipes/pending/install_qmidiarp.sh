@@ -8,7 +8,7 @@ autoheader
 automake --force-missing --add-missing
 autoconf 
 ./configure --enable-lv2plugins
-make
+make -j$(nproc)
 sudo make install
 make clean
 cd ..

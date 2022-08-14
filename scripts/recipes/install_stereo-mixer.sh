@@ -9,7 +9,7 @@ fi
 
 git clone https://github.com/unclechu/lv2-stereo-mixer.git
 cd lv2-stereo-mixer
-make
+make -j$(nproc)
 mv stereo-mixer.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2
 cd ..
 

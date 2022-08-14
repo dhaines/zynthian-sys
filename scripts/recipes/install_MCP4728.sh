@@ -8,7 +8,7 @@ fi
 
 git clone https://github.com/zynthian/MCP4728
 cd "MCP4728"
-make
+make -j$(nproc)
 make install
 
 #rm -rf "MCP4728"

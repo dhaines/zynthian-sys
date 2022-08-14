@@ -6,7 +6,7 @@ wget http://kokkinizita.linuxaudio.org/linuxaudio/downloads/jack_delay-0.4.2.tar
 tar xfvj jack_delay-0.4.2.tar.bz2
 cd jack_delay-0.4.2
 sed -i -- 's/CXXFLAGS += -march=native/#CXXFLAGS += -march=native/' Makefile
-make
+make -j$(nproc)
 make install
 make clean
 cd ..

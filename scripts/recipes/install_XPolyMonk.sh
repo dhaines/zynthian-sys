@@ -7,7 +7,7 @@ fi
 apt install -y libcairo2-dev libx11-dev
 git clone --recursive https://github.com/brummer10/XPolyMonk.lv2.git
 cd XPolyMonk.lv2
-make
+make -j$(nproc)
 make install INSTALL_DIR=$ZYNTHIAN_PLUGINS_DIR/lv2
 make clean
 cd ..

@@ -10,5 +10,5 @@ fi
 
 git clone https://github.com/moddevices/mod-cabsim-IR-loader.git
 cd mod-cabsim-IR-loader/source
-make
+make -j$(nproc)
 cp -r *.lv2 $ZYNTHIAN_PLUGINS_DIR/lv2/

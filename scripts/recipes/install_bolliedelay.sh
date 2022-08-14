@@ -7,7 +7,7 @@ fi
 
 git clone https://github.com/MrBollie/bolliedelay.lv2
 cd bolliedelay.lv2
-make
+make -j$(nproc)
 make install
 
 rm -rf "bolliedelay.lv2"

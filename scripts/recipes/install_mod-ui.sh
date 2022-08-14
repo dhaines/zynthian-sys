@@ -15,7 +15,7 @@ pip3 install pyserial==3.0 pystache==0.5.4 aggdraw==1.3.11
 pip3 install git+git://github.com/dlitz/pycrypto@master#egg=pycrypto
 
 cd utils
-make
+make -j$(nproc)
 
 if [ ! -d "$ZYNTHIAN_SW_DIR/mod-ui/data" ]; then
 	mkdir "$ZYNTHIAN_SW_DIR/mod-ui/data"
